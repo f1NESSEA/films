@@ -8,8 +8,8 @@ public class FilmsManagerTest {
         manager.addFilm("Movie I");
         manager.addFilm("Movie II");
         manager.addFilm("Movie III");
-       String[] actual = manager.findAll();
-       String[] expected = { "Movie I", "Movie II", "Movie III"};
+        String[] actual = manager.findAll();
+        String[] expected = {"Movie I", "Movie II", "Movie III"};
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -19,15 +19,16 @@ public class FilmsManagerTest {
         manager.addFilm("Movie I");
 
         String[] actual = manager.findAll();
-        String[] expected = { "Movie I"};
+        String[] expected = {"Movie I"};
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void testZeroFilms() {
         FilmsManager manager = new FilmsManager();
 
         String[] actual = manager.findAll();
-        String[] expected = { };
+        String[] expected = {};
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -39,7 +40,7 @@ public class FilmsManagerTest {
         manager.addFilm("Movie III");
         manager.addFilm("Movie IV");
         String[] actual = manager.findLast();
-        String[] expected = { "Movie IV", "Movie III", "Movie II", "Movie I"};
+        String[] expected = {"Movie IV", "Movie III", "Movie II", "Movie I"};
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -52,7 +53,7 @@ public class FilmsManagerTest {
         manager.addFilm("Movie IV");
         manager.addFilm("Movie V");
         String[] actual = manager.findLast();
-        String[] expected = { "Movie V", "Movie IV", "Movie III", "Movie II", "Movie I"};
+        String[] expected = {"Movie V", "Movie IV", "Movie III", "Movie II", "Movie I"};
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -67,7 +68,7 @@ public class FilmsManagerTest {
         manager.addFilm("Movie VI");
         manager.addFilm("Movie VII");
         String[] actual = manager.findLast();
-        String[] expected = { "Movie VII", "Movie VI", "Movie V", "Movie IV", "Movie III", "Movie II", "Movie I"};
+        String[] expected = {"Movie VII", "Movie VI", "Movie V", "Movie IV", "Movie III"};
         Assertions.assertArrayEquals(expected, actual);
     }
 
